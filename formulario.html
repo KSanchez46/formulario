@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi formulario </title>
+   <h1><header>Mi primer formulario</header></h1><br>
+</head>
+<body>
+    <section>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-j4e9{background-color:#9698ed;border-color:inherit;font-family:"Times New Roman", Times, serif !important;font-size:16px;
+              font-weight:bold;text-align:left;vertical-align:top}
+            .tg .tg-cqah{background-color:#9698ed;border-color:#000000;font-family:"Times New Roman", Times, serif !important;font-size:16px;
+              font-weight:bold;text-align:left;vertical-align:top}
+            .tg .tg-n3us{background-color:#9698ed;font-family:"Times New Roman", Times, serif !important;font-size:16px;font-weight:bold;
+              text-align:left;vertical-align:top}
+            .tg .tg-ud8r{border-color:inherit;font-family:"Times New Roman", Times, serif !important;font-size:12px;text-align:left;
+              vertical-align:top}
+            .tg .tg-l3g0{font-family:"Times New Roman", Times, serif !important;font-size:16px;text-align:left;vertical-align:top}
+            
+            </style>
+            <table class="tg" id="listado">
+            <thead>
+              <tr>
+                <th class="tg-cqah">Matricula</th>
+                <th class="tg-j4e9">Nombre</th>
+                <th class="tg-j4e9">Apellido Materno</th>
+                <th class="tg-j4e9">Apellido Paterno</th>
+                <th class="tg-j4e9">Edad</th>
+                <th class="tg-n3us">Dirección</th>
+                <th class="tg-n3us">Teléfono</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            <br>
+            <hr>
+            <br>
+    </section>
+    
+    <section>
+             <form name="form" method="post" >
+
+                <h4>Matricula:<input type="text" name="matricula" required><p></h4>  
+                
+                           
+                <h4><label for="class">Elige la materia</label>
+                   
+                <select name="class" id="class">
+                <option value="spanish">Español</option>
+                <option value="math">Matematicas</option>
+                <option value="science">Ciencias</option>
+                <option value="History">Historia</option>
+                </select></h4>
+
+                <h4>Nombre:<input type="text" name="nombre" required><p></h4> 
+                <h4>Apellido Materno:<input type="text" name="apellidoM" required><p></h4> 
+                <h4>Apellido Paterno:<input type="text" name="apellidoP" required><p></h4> 
+                <h4>Edad:<input type="text" name="edad" required><p></h4> 
+                <h4>Direccion:<input type="text" name="direccion" required><p></h4> 
+                <h4>Telefono:<input type="text" name="telefono" required><p></h4>        
+    
+                <input type="submit" value="Agregar" class="agregar" onclick="mi_funcion();" 
+                style="border: ;background-color: greenyellow; padding: 6px 12px; margin: 2px 2px;display: inline-block;font-size: 16px;">
+                <input type="reset" value="Borrar" name="btn2" 
+                style="border: ;background-color: crimson; padding: 6px 12px; margin: 2px 2px;display: inline-block;font-size: 16px;">
+        
+    
+        </form>
+
+    </section>
+</body>
+</html>
+<script>
+
+    function mi_funcion() {
+
+    var matricula=document.getElementById("input[name=matricula]");
+    var class=document.getElementById("input[name=class]");
+    var nombre=document.getElementById("input[name=nombre]");
+    var apellidoM=document.getElementById("input[name=apellidoM]");
+    var apellidoP=document.getElementById("input[name=apellidoP]");
+    var edad=document.getElementById("input[name=edad]");
+    var direccion=document.getElementById("input[name=direccion]");
+    var telefono=document.getElementById("input[name=telefono]");
+
+
+if (nombre == "") {
+    alert("Necesitas llenar el Nombre");
+
+  }
+  else{
+   alert("La base de datos ha sido actualizada");
+   markup = 
+   "<tr><td>" + nombre + "</td><td>"+ apellidoM +"</td><td>"+ edad +"</td><td>"+ matricula +"</td><td>"+ telefono +"</td><td>"+ materia +"</td></tr>";
+        tableBody = $("table tbody");
+        tableBody.append(markup);
+   }
+}
+
+
+</script>
